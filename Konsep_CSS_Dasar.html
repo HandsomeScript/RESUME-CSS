@@ -15,7 +15,7 @@
                 <li><a href="#bab1">BAB 1</a></li>
                 <li><a href="#bab2">BAB 2</a></li>
                 <li><a href="#bab3">BAB 3</a></li>
-                <li><a href="#bab4">BAB 4</a></li>
+                <li><a href="#bab4">BAB 4. Aturan Dasar Penulisan CSS</a></li>
                 <li><a href="#bab5">BAB 5</a></li>
                 <li><a href="#bab6">BAB 6</a></li>
                 <li><a href="#bab7">BAB 7</a></li>
@@ -45,8 +45,85 @@
                 <section id="bab3" class="bab"></section>
 
                 <!-- ========== BAB 4 ============ -->
-                <section id="bab4 class="bab"></section>
+                <section id="bab4" class="bab">
+                    <header>
+                        <h2 class="judulBab">
+                            BAB 4 Aturan Dasar Penulisan CSS
+                        </h2>
+                    </header>
+
+                    <!-- ---------- Sub Bab 4 ------------ -->
+                    <section class="subBab subBab4">
+                        <h3 class="judulSubBab judulSubBab4">Pengertian Selector, Declaration, Property dan Value CSS</h3>
+                        <p>Perhatikan contoh kode css di bawah ini
+                        <script src="https://gist.github.com/HandsomeScript/6bf4a68268afe32115bf21caadeafb68.js"></script>
+                        h1 disebut sebagai <em>selector</em>. Kemudian setelah selector terdapat <em>declaration</em> yang di dalamnya ada pasangan <em>property</em> dan <em>value</em>.
+                        </p>
+                        <p>Selector adalah bagian tertentu dari HTML yang ingin diubah tampilannya. Property adalah nama style yang akan mengubah bagian tertentu dari HTML. Dan value adalah nilai yang dipasangkan pada property tersebut.</p>
+                        <p>Property dan value nya harus dipisahkan dengan tanda titik dua ":"</p>
+                        <p>Kemudian, setiap pasangan property dan value harus diakhiri dengan tanda titik koma. </p>
+
+                        <h3 class="judulSubBab judulSubBab4">Case Sensitivity</h3>
+                        <p>Untuk penulisan deklarasi, CSS tidak membedakan huruf besar dan kecil (case-insensitive). Tapi untuk penulisan selector CSS bersifat case-sensitive.</p>
+
+                        <h3 class="judulSubBab judulSubBab4">Whitespace</h3>
+                        <p>Whitespace atau <em>carriage returns</em>itu adalah karkter yang tidak tampak seperti spasi, tab dan enter. Whitespace ini sangat berpengaruh pada penulisan selector dan deklarasi. Perhatikan baik-baik kode di bawah ini.
+                        <script src="https://gist.github.com/HandsomeScript/df7ac32e3cb0d911d8af4aa323f63e17.js"></script>
+                        </p>
+
+                        <h3 class="judulSubBab judulSubBab4">Membuat Komentar</h3>
+                        <p>CSS hanya mendukung 1 cara dalam penulisan komentar, yaitu menggunakan awalan karakter "/*" dan akhiran "*/".</p>
+                        <p>Semua kode CSS yang berada diantara dua tanda tersbut, tidak akan dibaca oleh web browser. Sehingga ini dapat digunakan untuk mematikan kode dalam proses <em>debugging</em>.</p>
+
+                        <h3 class="judulSubBab judulSubBab4">Cara Input Kode CSS</h3>
+                        
+                        <!-- --------- Sub SubBab4 ------------ -->
+                        <section class="subSubBab subSubBab4">
+                            <h4 class="subSubBab subSubBab4">Inline Style CSS</h4>
+                            <p>Metode ini digunakan untuk menulis kode CSS langsung di dalam tag HTML dengan menggunakan atribut style. Lihat kode berikut ini:
+                            <script src="https://gist.github.com/HandsomeScript/63668cd8035cee03cde9556a3767ba12.js"></script>
+                            </p>
+                            <p>Cara penulisan inline style css ini sangat tidak disarankan, karena kode HTML menjadi tercampur dengan kode CSS.</p>
+
+                            <h4 class="subSubBab subSubBab4">Internal Style CSS / embedded style CSS</h4>
+                            <p>Jika pada inline style css kita menggunakan atribut style, pada internal style css kita menggunakan tab &ltstyle&gt yang diletakkan dalam tag &lthead&gt. Berikut ini cara penggunaannya:
+                            <script src="https://gist.github.com/HandsomeScript/9ab609a52d434e4789824103a6ee12f7.js"></script>
+                            </p>
+                            <p>Kekurangannya jika kita menggunakan internal style css adalah ketika website kita memiliki banyak halaman dengan kode css yang sama, maka kita akan menambahkan semua kode css tersebut pada tiap halaman. Itu cukup merepotkan.</p>
+
+                            <h4 class="subSubBab subSubBab4">External Style CSS</h4>
+                            <p>Cara ini adalah yang sangat disarankan dalam penggunaan style css. Ini dilakukan dengan cara memisahkan CSS pada file tersendiri dengan ekstensi filenya *.css .</p>
+                            <p>Kemudian di dalam file HTML, yaitu di dalam tag &lthead&gt , kita panggil file css nya dengan tag &ltlink&gt. Coba perhatikan kode di bawah ini. Di sini kita diasumsikan sudah memiliki file css nya.
+                            <script src="https://gist.github.com/HandsomeScript/0617cbf3aff653afe5973f777850d613.js"></script>
+                            </p>
+                            <p>Pada HTML5, kita sudah tidak perlu menambahkan atribut type"text/css", karena di HTML5 ini, CSS sudah merupakan style default yang digunakan.</p>
+                            <p>Kemudian, terlihat pada kode di atas, tag &ltlink&gt tidak memiliki tag penutup, karena tag tersebut termasuk dalam <em>self closing tag</em>.</p>
+                            <p name="tanya">Mana yang paling tepat untuk digunakan? Jika website kita memiliki banyak halaman, maka yang paling tepat adalah menggunakan "External File CSS". jika website kita hanya terdiri satu halaman saja, maka "Internal Style CSS" lebih pas untuk digunakan. Untuk "Inline Style CSS" sebaiknya jangan digunakan, karena ini akan menyulitkan kita saat maintenance. Cara ini hanya pas digunakan oleh javaScripts karena JS akan secara otomatis menggenerate style css dengan cara inline style.</p>
+                        </section>
+                        <!-- ---------------------------------- -->
+
+                        <h3 class="judulSubBab judulSubBab4">CSS Media Type</h3>
+                        <p>Ini adalah cara untuk mengatur di media atau perangkat apa file css akan dijalankan. Ada 9 value yang bisa dipilih:</p>
+                        <ol>
+                            <li>all (default)</li>
+                            <li>screen (sering digunakan)</li>
+                            <li>print (sering digunakan)</li>
+                            <li>aural</li>
+                            <li>braille</li>
+                            <li>handheld</li>
+                            <li>projection</li>
+                            <li>tty</li>
+                            <li>tv</li>
+                        </ol>
+                        <p>Ada dua cara dalam menggunakan CSS Media Type. Yang sering dipakai adalah menggunakan tag &ltlink&gt.
+                        <script src="https://gist.github.com/HandsomeScript/b7744c7e3181005125bf508dacb3ccb7.js"></script>
+                        </p>
+                    </section>
+                </section>
                 
+                <!-- ========== BAB 5 ============ -->
+                <section id="bab5" class="bab"></section>
+
                 <!-- ========== BAB 6 ============ -->
                 <section id="bab6" class="bab"></section>
 

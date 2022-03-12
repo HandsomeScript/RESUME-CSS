@@ -16,7 +16,7 @@
                 <li><a href="#bab2">BAB 2</a></li>
                 <li><a href="#bab3">BAB 3</a></li>
                 <li><a href="#bab4">BAB 4</a></li>
-                <li><a href="#bab5">BAB 5</a></li>
+                <li><a href="#bab5">BAB 5. CSS Selector</a></li>
                 <li><a href="#bab6">BAB 6</a></li>
                 <li><a href="#bab7">BAB 7</a></li>
                 <li><a href="#bab8">BAB 8</a></li>
@@ -45,7 +45,49 @@
                 <section id="bab3" class="bab"></section>
 
                 <!-- ========== BAB 4 ============ -->
-                <section id="bab4 class="bab"></section>
+                <section id="bab4" class="bab"></section>
+                
+                <!-- ========== BAB 5 ============ -->
+                <section id="bab5" class="bab">
+                    <header>
+                        <h2 class="judulBab">
+                            BAB 5 CSS SELECTOR
+                        </h2>
+                        <p>Selector dalam HTML itu adalah pola dalam mencari element-element dalam HTML. Penguasaan tentang "Selector" adalah hal yang paling penting dalam belajar CSS. Ada 16 jenis selector penting yang harus dikuasai.</p>
+                        <p>Sebelum menerapkan CSS ke dalam HTML, hal terpenting yang perlu diperhatikan adalah pada struktur HTML yang teratur dan konsisten. Jika struktur HTML berantakan, maka akan kesulitan dalam penerapan CSS.</p>
+                    </header>
+
+                    <!-- ---------- Sub Bab 5 ------------ -->
+                    <section class="subBab subBab5">
+                        <h3 class="judulSubBab judulSubBab5">Universal Selector</h3>
+                        <p>Selector ini menggunakan tanda bintang "*". Selector ini memang simpel, tapi efeknya susah untuk ditimpa jika tidak benar-benar memahami urutan prioritas selector.
+                        <script src="https://gist.github.com/HandsomeScript/1b7f9db1b1c96832058c42e171cc0f7c.js"></script>
+                        </p>
+                        <p>Source code di atas menunjukkan cara penggunaan Universal Selector sekaligus efek dalam penerapannya. Di situ terlihat walaupun element selector div mencoba untuk menimpa dan memberikan style pada element div, tetapi hasilnya tetap mengikuti style yang diberikan oleh universal selector. </p>
+                        <p>Oleh karena itu, Universal Selector jarang digunakan karena akan menyulitkan kita dalam mengontrol dan memberikan style pada element HTML yang kita inginkan.</p>
+                        
+                        <h3 class="judulSubBab judulSubBab5">Element Selector</h3>
+                        <p>Element selector atau tag selector atau type selector digunakan untuk mencari element HTML berdasarkan nama tag nya.
+                        <script src="https://gist.github.com/HandsomeScript/bb9807cfe41fa9a76637b347a8523948.js"></script>
+                        </p>
+                        <p>Element selector sifatnya masih sangat global, sehingga kita tidak bisa mentarget element yang lebih spesifik.</p>
+                        
+                        <h3 class="judulSubBab judulSubBab5">Class Selector</h3>
+                        <p>class adalah atribut tag HTML. value/nama dari atribut class pada tag-tag HTML itu boleh sama. Sehingga saat menjadikan nama/value class sebagai selector, itu dapat mentarget satu atau lebih element HTML yang berbeda. ketika dijadikan sebagai selector, maka penulisannya tidak boleh salah (sifatnya case sensitive).
+                         <script src="https://gist.github.com/HandsomeScript/940f9f1d6163de9b72e68dac66ca9d1e.js"></script>
+                        </p>
+                        <p>Dalam HTML, satu tag itu bisa memiliki lebih dari satu nama class. Jika semua classnya dipanggil dan diberikan style, maka yang terjadi adalah efek style gabungan.
+                        <script src="https://gist.github.com/HandsomeScript/c6f1927c37c81b363373c8c5edb25184.js"></script>
+                        </p>
+                        
+                        <h3 class="judulSubBab judulSubBab5">ID Selector</h3>
+                        <p>Id pada HTML juga adalah merupakan atribut, yang mana dalam konsepnya hanya boleh ada satu nama/value id dalam satu halaman HTML.</p>
+                        <p>Untuk menjadikan nama Id sebagai selector itu harus diawali dengan menggunakan tanda pagar "#" sebelum nama Id nya.
+                        <script src="https://gist.github.com/HandsomeScript/54fc1f01b244103bf24528b2854afa99.js"></script>
+                        </p>
+                        <p>Id selector memiliki prioritas yang sangat tinggi, dan dikatakan bahwa sebisa mungkin jangan menggunakan Id selector jika masih bisa menggunakan class selector.</p>
+                    </section>
+                </section>
                 
                 <!-- ========== BAB 6 ============ -->
                 <section id="bab6" class="bab"></section>
